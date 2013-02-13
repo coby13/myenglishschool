@@ -1,0 +1,38 @@
+<ul class="nav">
+<h1>Το Blog μας</h1>
+<% if user_signed_in? %><div class="pull-right"><button class="btn btn-large btn-primary" type="button"><%= link_to 'Νέο άρθρο', new_article_path %></button></div><%end%>
+
+
+</br>
+</br>
+<% @articles.each do |article| %>
+<div class="title">
+	
+    <%= article.title %>
+</div>
+</br>
+
+<div class="row">
+<div class="span3">
+    <%= image_tag article.image.url(:thumb) %>
+</div>
+<div class="span5">
+
+    <%= raw(article.prebody) %>
+    <%= link_to 'Περισσότερα..', article %>
+</br>
+<% if user_signed_in? %>
+    <%= link_to 'Edit', edit_article_path(article) %>
+    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%end%>
+</div>
+</div>
+</br>
+<% end %>
+
+<br />
+
+
+
+</div>
+

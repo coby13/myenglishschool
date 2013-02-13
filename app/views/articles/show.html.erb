@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class ="titleshow">
+  <%= @article.title %>
+</div>
+<p>
+<%= image_tag @article.image.url(:medium) %>
+</p>
+
+<p>
+  <%= raw@article.body %>
+</p>
+
+<% if user_signed_in? %>
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%end%>
+<%= link_to 'Back', articles_path %>

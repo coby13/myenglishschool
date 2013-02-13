@@ -15,6 +15,7 @@ gem "high_voltage"
 gem 'rmagick'
 gem 'bootstrap-will_paginate'
 gem 'google-webfonts'
+gem "ckeditor"
 
 # Gems used only for assets and not required
 # in production environments by default.

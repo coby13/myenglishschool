@@ -33,6 +33,9 @@ GEM
     bootstrap-will_paginate (0.0.9)
       will_paginate
     builder (3.0.4)
+    ckeditor (4.0.2)
+      mime-types
+      orm_adapter
     cocaine (0.2.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
@@ -145,6 +148,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-will_paginate
+  ckeditor
   coffee-rails (~> 3.2.1)
   devise
   google-webfonts
